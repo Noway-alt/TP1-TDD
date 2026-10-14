@@ -93,7 +93,7 @@ def get_student(student_id: int):
 
 # ---------- POST /students ----------
 
-@router.post("", status_code=201)
+@router.post("", status_code=200)
 def create_student(student_in: StudentIn):
     """Crée un étudiant (409 si l'email existe déjà)."""
     if _email_taken(student_in.email):
